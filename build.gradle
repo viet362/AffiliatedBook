@@ -21,6 +21,10 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
+war {
+    archiveFileName = 'ROOT.war'
+}
+
 dependencies {
     compileOnly('jakarta.servlet:jakarta.servlet-api:6.0.0')
     implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0'

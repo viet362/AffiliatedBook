@@ -31,7 +31,6 @@ public class BrandController  extends HttpServlet {
     }
 
     private void showHomePage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher("brands/homeBrand.jsp");
         String keyword = req.getParameter("keyword");
         String productId = req.getParameter("productId");
         List<Brand> brands = brandService.getByNameContains(keyword);

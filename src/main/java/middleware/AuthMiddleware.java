@@ -46,7 +46,7 @@ public class AuthMiddleware extends HttpFilter {
         if (isAdminPage) {
             boolean isNotAdmin = user == null || user.getUserRole().getId() != 1;
             if (isNotAdmin) {
-                response.sendRedirect(request.getContextPath() + "errors/not-found.jsp");
+                response.sendRedirect(request.getContextPath() + "/errors/not-found.jsp");
                 return;
             }
         }
